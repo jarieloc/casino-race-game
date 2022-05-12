@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <div id="menu">
+      <div class="menutitle">
+        <h1>Casino Race Game</h1>
+      </div>
+      <div class="gameButtons">
+        <button type="button" name="button" onclick="menuDisplayGame()">New Game</button>
+      </div>
+
+    </div>
+    <div id="game">
+      <div class="container">
+        <div class="gameTitle">
+          <h2>Casino Game</h2>
+          <div id="winner">
+
+          </div>
+        </div>
+        <div class="row">
+          <button class="betButton" type="button" name="button" onclick="makeBet(0)">Place Bet Here</button>
+          <img class="blueBlock" id="blue01" src="images/blue/01.jpg" alt="">
+          <img class="blueBlock" id="blue02" src="images/blue/02.jpg" alt="">
+          <img class="blueBlock" id="blue03" src="images/blue/03.jpg" alt="">
+          <img class="blueBlock" id="blue04" src="images/blue/04.jpg" alt="">
+          <h1>8x</h1>
+        </div>
+        <div class="row">
+          <button class="betButton" type="button" name="button" onclick="makeBet(1)">Place Bet Here</button>
+          <img class="redBlock" id="red01" src="images/red/01.jpg" alt="">
+          <img class="redBlock" id="red02" src="images/red/02.jpg" alt="">
+          <img class="redBlock" id="red03" src="images/red/03.jpg" alt="">
+          <img class="redBlock" id="red04" src="images/red/04.jpg" alt="">
+          <h1>4x</h1>
+        </div>
+        <div class="row">
+          <button class="betButton" type="button" name="button" onclick="makeBet(2)">Place Bet Here</button>
+          <img class="greenBlock" id="green01" src="images/green/01.jpg" alt="">
+          <img class="greenBlock" id="green02" src="images/green/02.jpg" alt="">
+          <img class="greenBlock" id="green03" src="images/green/03.jpg" alt="">
+          <img class="greenBlock" id="green04" src="images/green/04.jpg" alt="">
+          <h1>2x</h1>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="betinfo">
+          <h3 id="playerBet">Your bet: </h3>
+          <h3 id="playerBetMult">Multiplier: </h3>
+          <h3 id="playerColor">Color: </h3>
+          <h3 id="playerMoney">Your money: </h3>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="gameMenu">
+          <div class="gameButtons">
+            <button type="button" name="button" onclick="startGame()">Start Race</button>
+            <button id="returnToMenu" type="button" name="button" onclick="menuDisplayMenu()">Return to Menu</button>
+        </div>
+        <div id="myModal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <button type="button" name="button" onclick="updateBet()">Place Bet</button>
+            <input id="betField" type="number" name="" value=0>
+          </div>
+        </div>
+          <div id="myModalR1" class="modal" style="display: none;">
+            <div class="modal-content2">
+              <span class="close">&times;</span>
+              <h3>You win!</h3>
+              <img src="images/blue/full.jpg" alt="">
+            </div>
+          </div>
+          <div id="myModalR2" class="modal" style="display: none;">
+            <div class="modal-content2">
+              <span class="close">&times;</span>
+              <h3>You win!</h3>
+              <img src="images/red/full.jpg" alt="">
+            </div>
+          </div>
+          <div id="myModalR3" class="modal" style="display: none;">
+            <div class="modal-content2">
+              <span class="close">&times;</span>
+              <h3>You win!</h3>
+              <img src="images/green/full.jpg" alt="">
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="scripts/engine.js"></script>
+    <script src="scripts/menu.js"></script>
+  </body>
+</html>
